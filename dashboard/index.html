@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f2eb">
+  <title>SIGNAL — Token launch intelligence</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="../data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#view=radar" aria-label="SIGNAL home"><span class="brand-mark">S</span><span>SIGNAL<span class="brand-period">.</span></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <a href="#view=radar" class="nav-link active" data-nav="radar"><span class="nav-glyph" aria-hidden="true">◫</span>Launch radar<span class="nav-count" id="navBoardCount">—</span></a>
+        <a href="#view=watchlist" class="nav-link" data-nav="watchlist"><span class="nav-glyph" aria-hidden="true">☆</span>Watchlist<span class="nav-count" id="navWatchCount">—</span></a>
+        <a href="#view=live" class="nav-link" data-nav="live"><span class="nav-glyph" aria-hidden="true">↗</span>Token live<span class="live-indicator"></span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-rule"></div>
+        <button class="model-link" id="modelButton"><span class="model-icon">◎</span><span>Valuation model<small>Methodology & assumptions</small></span><span class="model-arrow">↗</span></button>
+        <div class="side-foot"><span class="status-dot"></span>OFFLINE · LOCAL DATA</div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb"><span>INTELLIGENCE</span><span class="crumb-slash">/</span><span id="crumbView">LAUNCH RADAR</span></div><div class="snapshot"><span class="snapshot-dot"></span><span>SNAPSHOT</span><strong id="asOf">—</strong><span class="top-divider"></span><span id="sourceLabel">LOCAL SOURCE</span></div></header>
+      <div class="content">
+        <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>EARLY-STAGE PROTOCOLS <span class="eyebrow-year" id="modelVersion">INTELLIGENCE</span></div><h1 id="pageTitle">Token launch<br><em>intelligence.</em></h1><p class="heading-copy" id="pageDescription">A ranked view of protocols with meaningful pre-token upside.</p></div><div class="heading-aside"><span class="aside-kicker">SIGNAL INDEX <span class="tiny-star">✳</span></span><span class="aside-number" id="indexNumber">—</span><span class="aside-caption">PROTOCOLS TRACKED</span></div></section>
+        <section class="metrics" aria-label="Board summary">
+          <article class="metric"><div class="metric-label">PRE-TOKEN RADAR <span class="metric-glyph">↗</span></div><div class="metric-value" id="metricRadar">—</div><div class="metric-foot">Protocols across the full ranked board</div></article>
+          <article class="metric"><div class="metric-label">SNAPSHOT WATCHLIST <span class="metric-glyph">☆</span></div><div class="metric-value" id="metricWatch">—</div><div class="metric-foot">Selected for closer tracking</div></article>
+          <article class="metric"><div class="metric-label">LIVE TOKENS <span class="metric-glyph">◉</span></div><div class="metric-value" id="metricLive">—</div><div class="metric-foot">Recorded market data</div></article>
+          <article class="metric metric-floor"><div class="metric-label">WATCHLIST TVL FLOOR <span class="metric-glyph">⌁</span></div><div class="metric-value" id="metricFloor">—</div><div class="metric-foot">Minimum TVL threshold used for watchlist</div></article>
+        </section>
+        <section class="chart-section" aria-labelledby="chartTitle"><div class="section-head"><div><div class="section-index">01 <span>·</span> MARKET MAP</div><h2 id="chartTitle">Upside distribution</h2></div><div class="chart-note"><span class="chart-key"></span>IMPLIED VALUE <span class="unit-note">USD · TOP PROTOCOLS</span></div></div><div class="chart" id="chart" role="img" aria-label="Implied value distribution of top ranked pre-token protocols"></div><div class="chart-baseline"><span>RANKED PROTOCOLS</span><span>MODEL ESTIMATE, NOT MARKET CAP</span></div></section>
+        <section class="table-section" aria-labelledby="tableHeading"><div class="table-title-row"><div><div class="section-index">02 <span>·</span> PROTOCOL BOARD</div><h2 id="tableHeading">Ranked opportunities <span class="result-count" id="resultCount">—</span></h2></div><div class="view-tabs" role="tablist" aria-label="Protocol status"><button class="view-tab selected" data-status="pre-token" role="tab" aria-selected="true">Pre-token</button><button class="view-tab" data-status="recorded" role="tab" aria-selected="false">Token live</button></div></div>
+          <div class="toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search protocols" autocomplete="off" aria-label="Search protocols"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Filter by chain</span><select id="chainFilter"><option value="">All chains</option></select><span class="select-arrow">⌄</span></label><label class="select-wrap"><span class="sr-only">Filter by category</span><select id="categoryFilter"><option value="">All categories</option></select><span class="select-arrow">⌄</span></label><label class="select-wrap"><span class="sr-only">Sort protocols</span><select id="sortSelect"><option value="rank">Ranked by value</option><option value="value">Highest value</option><option value="growth">Highest growth</option><option value="tvl">Highest TVL</option><option value="name">Name A–Z</option></select><span class="select-arrow">⌄</span></label><label class="watch-toggle"><input id="watchOnly" type="checkbox"><span class="toggle-box">✓</span><span>Watchlist</span></label><button class="reset-button" id="resetButton" hidden>Reset <span aria-hidden="true">×</span></button></div>
+          <div class="table-wrap"><table><thead><tr><th scope="col" class="rank-col">RANK</th><th scope="col">PROTOCOL</th><th scope="col">CATEGORY</th><th scope="col" class="numeric sortable" data-sort="tvl" tabindex="0" aria-sort="none">TVL <span>↕</span></th><th scope="col" class="numeric sortable" data-sort="growth" tabindex="0" aria-sort="none">7D CHANGE <span>↕</span></th><th scope="col" class="numeric value-head" id="valueHeader">IMPLIED VALUE <span class="header-info" title="Modeled estimate">ⓘ</span></th><th scope="col" class="detail-col"><span class="sr-only">Details</span></th></tr></thead><tbody id="protocolRows"></tbody></table><div class="empty-state" id="emptyState" hidden><span class="empty-symbol">⌕</span><strong>No matching protocols</strong><span>Adjust your filters or search another term.</span><button id="emptyReset">Clear filters</button></div></div><div class="table-footer"><span id="footerCount">—</span><span>VALUES ARE MODEL ESTIMATES · NOT FINANCIAL ADVICE</span></div></section>
+        <footer class="page-footer"><span>SIGNAL <span class="footer-dot">·</span> PROTOCOL INTELLIGENCE</span><span id="footerMeta">MODEL —</span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="detailDialog" class="detail-dialog" aria-labelledby="dialogTitle"><div class="dialog-top"><span class="dialog-label">PROTOCOL BRIEF <span>·</span> <span id="dialogRank">—</span></span><button class="icon-button" id="closeDetail" aria-label="Close protocol details" title="Close">×</button></div><div id="detailContent"></div></dialog>
+  <dialog id="modelDialog" class="model-dialog" aria-labelledby="modelTitle"><div class="dialog-top"><span class="dialog-label">SIGNAL METHODOLOGY</span><button class="icon-button" id="closeModel" aria-label="Close model explanation" title="Close">×</button></div><h2 id="modelTitle">A transparent<br><em>valuation framework.</em></h2><p class="model-intro">Implied value is a comparative estimate for pre-token protocols, not a prediction of launch price or guaranteed return. Missing 7D growth defaults to 0%; missing listing age uses 365 days. Listing age is a maturity proxy, not verified protocol age.</p><div class="formula-box"><span>MODEL FORMULA</span><code id="formulaText">TVL × 0.35 × (1 + clamp(7D growth, −50%, 100%) / 200) × (0.65 + 0.35 × min(listing age, 1095) / 1095)</code></div><div class="model-points"><div><b>01</b><span><strong>Base multiple</strong><small>Starting valuation anchor for the protocol.</small></span></div><div><b>02</b><span><strong>Growth multiplier</strong><small>Reflects recent protocol growth signals.</small></span></div><div><b>03</b><span><strong>Maturity multiplier</strong><small>Adjusts for protocol maturity and launch context.</small></span></div></div><p class="model-disclaimer">Estimates are directional and depend on the supplied model inputs. They are not financial advice.</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
