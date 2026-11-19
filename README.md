@@ -1,3 +1,7 @@
+[![make.fun](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/0xyfann/makefun-token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/0xyfann/makefun-token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
 # SIGNAL — Token launch radar
 
 Dashboard intelijen peluncuran token untuk make.fun `token-radar-01`. Seluruh data berasal dari satu snapshot DefiLlama; halaman berjalan offline tanpa dependensi, font eksternal, atau panggilan API. Build memakai Node.js 22.18+ dan standard library saja.
@@ -69,3 +73,7 @@ Script memeriksa jumlah/keunikan slug dan rank, cakupan watchlist, nilai menurun
 - `LICENSE`: lisensi MIT.
 
 Tidak ada submit, push, remote Git, keypair, atau bundling transcript dalam pekerjaan ini. Saat akan submit, gunakan log asli harness sesuai transcript gate; jangan merekonstruksi transcript. Verifikasi server make.fun tetap menjadi penentu gate resmi.
+
+[Bounty make.fun](https://make.fun/bounty/token-radar-01)
+
+Referral: https://make.fun/r/p1x954ca
